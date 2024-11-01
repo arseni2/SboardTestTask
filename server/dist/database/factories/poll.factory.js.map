@@ -1,0 +1,1 @@
+{"version":3,"file":"poll.factory.js","sourceRoot":"","sources":["../../../src/database/factories/poll.factory.ts"],"names":[],"mappings":";;AAAA,qDAAyC;AACzC,kEAA4D;AAC5D,kDAAkD;AAElD,IAAA,wBAAM,EAAC,wBAAU,EAAE,GAAG,EAAE;IACvB,MAAM,IAAI,GAAG,IAAI,wBAAU,EAAE,CAAC;IAC9B,IAAI,CAAC,QAAQ,GAAG,UAAK,CAAC,KAAK,CAAC,QAAQ,EAAE,CAAA;IACtC,OAAO,IAAI,CAAC;AACb,CAAC,CAAC,CAAC"}

@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: postgres
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=poll
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - "5555:5432"
+  server:
+    container_name: server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    volumes:
+      - ./server:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+  client:
+    build:
+      context: ./client/my-app
+      dockerfile: Dockerfile
+    volumes:
+      - ./client/my-app:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    depends_on:
+      - server
